@@ -1,11 +1,15 @@
 import React from "react";
-import "./App.css";
+import { ThemeProvider } from "styled-components";
 import { HomePage } from "./Pages/Home";
+import { theme } from "./style/theme";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <ThemeProvider theme={theme}>
+        <HomePage />
+      </ThemeProvider>
     </div>
   );
 }
