@@ -5,7 +5,7 @@ export const Header = styled.div`
     display: flex;
     height: 80px;
     justify-content: space-between;
-    padding: ${theme.space(5)}px ${theme.space(6)}px;
+    padding: 0px ${theme.space(6)}px;
 
     > * {
       flex-basis: 100%;
