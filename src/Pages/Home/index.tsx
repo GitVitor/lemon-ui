@@ -3,11 +3,7 @@ import { Header } from "../../Components/Header";
 export const HomePage = () => {
   return (
     <section>
-      <Header
-        onLogin={() => {}}
-        onLogout={() => {}}
-        onCreateAccount={() => {}}
-      />
+      <Header />
       <header className="App-header">
         chegou a hora de escolher a sua energia
       </header>
