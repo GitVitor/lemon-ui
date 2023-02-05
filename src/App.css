@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+
 /**
     Remove all the styles of the "User-Agent-Stylesheet".
 **/
@@ -86,7 +88,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: "Inter", sans-serif;
   vertical-align: baseline;
 }
 
@@ -445,4 +447,8 @@ textarea {
 
 .App {
   height: 100vh;
+}
+
+* {
+  font-family: "Inter", sans-serif;
 }
