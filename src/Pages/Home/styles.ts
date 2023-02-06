@@ -3,14 +3,14 @@ import { Container as OriginalContainer } from "../../Components/Container";
 
 export const Container = styled(OriginalContainer)`
   ${({ theme }) => `
-  background-color: #008059;
+  background-color: ${theme.color.primary};
   height: 100%;
 
   padding: ${theme.space(2)}px;
 
   header,
   p {
-    color: white;
+    color: ${theme.color.white};
     font-weight: bold;
     padding: ${theme.space(4)}px;
   }
@@ -29,7 +29,7 @@ export const Container = styled(OriginalContainer)`
 
     svg {
       height: 24px;
-      color: #8affb6;
+      color: ${theme.color.secondary};
       margin-bottom: ${theme.space(4)}px;
 
     }

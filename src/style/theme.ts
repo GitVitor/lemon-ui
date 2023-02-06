@@ -9,6 +9,12 @@ const breakpoints: { [key: string]: number } = {
 };
 
 export const theme: DefaultTheme = {
+  color: {
+    primary: "#008059",
+    secondary: "#8affb6",
+    white: "#fff",
+    black: "#000",
+  },
   space: (size: number) => {
     return size * 4;
   },
