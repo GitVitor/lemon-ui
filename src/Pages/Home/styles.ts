@@ -4,7 +4,6 @@ import { Container as OriginalContainer } from "../../Components/Container";
 export const Container = styled(OriginalContainer)`
   ${({ theme }) => `
   background-color: ${theme.color.primary};
-  height: 100%;
 
   padding: ${theme.space(2)}px;
 

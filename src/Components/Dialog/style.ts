@@ -41,5 +41,6 @@ export const DialogBody = styled.div`
     margin: 0;
     padding: 0 ${theme.space(8)}px;
     overflow: scroll;
+    overscroll-behavior: contain;
   `}
 `;

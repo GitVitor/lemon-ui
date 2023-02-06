@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.div`
   ${({ theme }) => `
+    background-color: ${theme.color.white};
     display: flex;
     height: 80px;
     justify-content: space-between;
