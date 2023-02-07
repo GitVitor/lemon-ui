@@ -1,0 +1,56 @@
+# Dialog component
+
+Há muitas maneiras de adicionar interações modais a uma aplicação web, e uma boa maneira é utilizando o componente de Dialog. Ele pode ser usado para exibir conteúdo adicional ao usuário, sem precisar mudar de página.
+
+Imaginemos que você está desenvolvendo uma aplicação de gerenciamento de tarefas. Ao clicar em uma tarefa específica, você deseja exibir detalhes adicionais sobre a tarefa, como descrição, data de vencimento e progresso. Em vez de redirecionar o usuário para uma nova página, você pode usar o componente Dialog para exibir esses detalhes em uma janela modal na mesma página.
+
+Para começar, você pode importar o componente Dialog e criar o seu próprio componente Dialog personalizado, que receba as informações da tarefa como propriedades. Quando o usuário clica em uma tarefa, você pode definir a propriedade isOpen do componente Dialog como verdadeira e exibir a janela modal.
+
+Além disso, você também pode adicionar um botão de fechar na parte superior direita da janela modal, para que o usuário possa fechá-la a qualquer momento. Você também pode definir uma propriedade onClose que será executada quando o usuário fechar a janela modal, para limpar qualquer estado relacionado à tarefa que está sendo exibida.
+
+Com o componente Dialog, você pode criar janelas modais interativas e de fácil utilização para exibir informações adicionais ao usuário, sem interromper a jornada do usuário. E com a customização disponível, você pode tornar o seu componente Dialog único e adaptado às necessidades da sua aplicação.
+
+import { Story } from "@storybook/addon-docs";
+
+<Story id="dialog--doc" />
+
+---
+
+## Propriedades
+
+`title`
+Tipo: string
+
+Default: null
+
+Descrição: Título do diálogo. Se não for passado, não será exibido título.
+
+---
+
+`isOpen`
+Tipo: boolean
+
+Descrição: Controla se o diálogo está aberto ou fechado.
+
+---
+
+`onClose`
+Tipo: () => void
+
+Descrição: Função chamada quando o diálogo é fechado.
+
+---
+
+`closeOnOverlayClick`
+Tipo: boolean
+
+Default: false
+
+Descrição: Controla se o diálogo é fechado quando clicado na overlay (área cinza ao fundo do diálogo).
+
+---
+
+`children`
+Tipo: ReactNode
+
+Descrição: Conteúdo do diálogo.
