@@ -4,9 +4,9 @@ type Props = {
   onClick: () => void;
 };
 
-export const CloseButton = ({ onClick }: Props) => {
+export const CloseButton = ({ onClick, ...props }: Props) => {
   return (
-    <Button onClick={onClick}>
+    <Button onClick={onClick} {...props}>
       <svg
         focusable="false"
         aria-hidden="true"

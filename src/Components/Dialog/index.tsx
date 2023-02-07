@@ -2,7 +2,7 @@ import React, { useState, useEffect, ReactNode } from "react";
 import { CloseButton } from "../CloseButton";
 import * as s from "./style";
 
-type DialogProps = {
+export type DialogProps = {
   title?: string;
   isOpen: boolean;
   onClose: () => void;
@@ -40,13 +40,20 @@ export const Dialog = ({
   return showDialog ? (
     <>
       <s.DialogWrapper>
-        <s.Overlay onClick={closeOnOverlayClick ? handleClose : undefined} />
-        <s.Dialog>
-          <s.DialogHeader className="dialog-header">
-            {title && <h2 className="dialog-title">{title}</h2>}
-            <CloseButton onClick={handleClose} />
+        <s.Overlay
+          data-testid="overlay"
+          onClick={closeOnOverlayClick ? handleClose : undefined}
+        />
+        <s.Dialog data-testid="dialog">
+          <s.DialogHeader className="dialog-header" data-testid="dialog-header">
+            {title && (
+              <h2 data-testid="dialog-title" className="dialog-title">
+                {title}
+              </h2>
+            )}
+            <CloseButton data-testid="close-button" onClick={handleClose} />
           </s.DialogHeader>
-          <s.DialogBody>{children}</s.DialogBody>
+          <s.DialogBody data-testid="dialog-body">{children}</s.DialogBody>
         </s.Dialog>
       </s.DialogWrapper>
     </>
