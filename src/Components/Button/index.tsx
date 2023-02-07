@@ -9,8 +9,9 @@ export const Button = styled.button<ButtonProps>`
     background-color: ${
       variant === "primary" ? theme.color.primary : theme.color.white
     };
-    color: ${variant === "primary" ? theme.color.white : theme.color.black};
-    padding: ${theme.space(4)}px;
     border: none;
+    color: ${variant === "primary" ? theme.color.white : theme.color.black};
+    font-weight: bold;
+    padding: ${theme.space(4)}px;
   `}
 `;

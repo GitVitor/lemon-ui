@@ -1,4 +1,5 @@
 import React, { useState, useEffect, ReactNode } from "react";
+import { CloseButton } from "../CloseButton";
 import * as s from "./style";
 
 type DialogProps = {
@@ -43,7 +44,7 @@ export const Dialog = ({
         <s.Dialog>
           <s.DialogHeader className="dialog-header">
             {title && <h2 className="dialog-title">{title}</h2>}
-            <button onClick={handleClose}>x</button>
+            <CloseButton onClick={handleClose} />
           </s.DialogHeader>
           <s.DialogBody>{children}</s.DialogBody>
         </s.Dialog>
